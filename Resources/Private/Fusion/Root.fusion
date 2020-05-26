@@ -14,9 +14,15 @@ prototype(Bare.Package:DefaultPage) < prototype(Neos.Neos:Page) {
             sectionName = 'headScripts'
         }
 
-        head.stylesheets.startbootstrap = Neos.Fusion:ResourceUri {
-        path = 'resource://Bare.Package/Public/Styles/bootstrap/css/bootstrap.min.css'
-        }
+        stylesheets.startbootstrap = Neos.Fusion:Tag {
+            tagName = 'link'
+            attributes {
+            rel = 'stylesheet'
+            href = Neos.Fusion:ResourceUri {
+            path = 'resource://Bare.Package/Public/Styles/bootstrap/css/bootstrap.min.css'
+     }
+  }
+}
     }
 
     body {
