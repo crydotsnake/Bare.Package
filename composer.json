@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "neos/nodetypes": "*"
+    },
+    "suggest": {
+        "neos/seo": "*"
+    },
+    "name": "bare/package",
+    "autoload": {
+        "psr-4": {
+            "Bare\\Package\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Bare.Package"
+        }
+    }
+}

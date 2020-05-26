@@ -1,0 +1,36 @@
+/**
+ * Root Fusion for the Bare Template site
+ */
+
+prototype(Bare.Package:DefaultPage) < prototype(Neos.Neos:Page) {
+    head {
+        stylesheets.site = Neos.Fusion:Template {
+            templatePath = 'resource://Bare.Package/Private/Templates/Page/Default.html'
+            sectionName = 'stylesheets'
+        }
+
+        javascripts.site = Neos.Fusion:Template {
+            templatePath = 'resource://Bare.Package/Private/Templates/Page/Default.html'
+            sectionName = 'headScripts'
+        }
+
+        head.stylesheets.startbootstrap = Neos.Fusion:ResourceUri {
+        path = 'resource://Bare.Package/Public/Styles/bootstrap/css/bootstrap.min.css'
+        }
+    }
+
+    body {
+        templatePath = 'resource://Bare.Package/Private/Templates/Page/Default.html'
+        sectionName = 'body'
+        parts {
+            menu = Neos.Neos:Menu
+        }
+
+        javascripts.site = Neos.Fusion:Template {
+            templatePath = 'resource://Bare.Package/Private/Templates/Page/Default.html'
+            sectionName = 'bodyScripts'
+        }
+    }
+}
+
+include: NodeTypes/**/*
