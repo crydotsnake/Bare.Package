@@ -14,7 +14,7 @@ prototype(Bare.Package:DefaultPage) < prototype(Neos.Neos:Page) {
             sectionName = 'headScripts'
         }
 
-        stylesheets.startbootstrap = Neos.Fusion:Tag {
+        stylesheets.main = Neos.Fusion:Tag {
             tagName = 'link'
             attributes {
             rel = 'stylesheet'
