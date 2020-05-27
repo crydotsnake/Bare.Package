@@ -31,12 +31,24 @@ prototype(Bare.Package:DefaultPage) < prototype(Neos.Neos:Page) {
         parts {
             menu = Neos.Neos:Menu
         }
-
-        javascripts.site = Neos.Fusion:Template {
-            templatePath = 'resource://Bare.Package/Private/Templates/Page/Default.html'
-            sectionName = 'bodyScripts'
+        javascripts {
+            jquery = Neos.Fusion:Tag {
+              tagName = 'script'
+              attributes {
+                src = Neos.Fusion:ResourceUri {
+                  path = 'resource://Bare.Package/Public/JavaScript/jquery/jquery.slim.min.js'
+                }
+              }
+           }
+            bootstrap = Neos.Fusion:Tag {
+              tagName = 'script'
+              attributes {
+                src = Neos.Fusion:ResourceUri {
+                  path = 'resource://Bare.Package/Public/JavaScript/bootstrap/bootstrap.bundle.min.js'
+                }
+              }
+           }
         }
-    }
 }
 
 include: NodeTypes/**/*
