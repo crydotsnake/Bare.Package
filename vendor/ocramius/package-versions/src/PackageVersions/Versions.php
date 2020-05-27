@@ -110,7 +110,7 @@ final class Versions
   'symfony/yaml' => 'v4.4.8@b385dce1c0e9f839b384af90188638819433e252',
   'typo3fluid/fluid' => '2.6.9@ba05e165bb4fd1302edf3f0280a149992e8c79be',
   'webimpress/safe-writer' => '2.0.1@d6e879960febb307c112538997316371f1e95b12',
-  'bare/package' => 'dev-master@1211c95ac2e244f16eea0899b7b8760d2a783b4c',
+  'bare/package' => 'dev-master@4464a5ca2bd06eb893be7f3e414a2d4f25e681c4',
 );
 
     private function __construct()
