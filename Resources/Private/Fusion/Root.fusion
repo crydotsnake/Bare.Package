@@ -3,6 +3,7 @@
  */
 
 prototype(Bare.Package:DefaultPage) < prototype(Neos.Neos:Page) {
+    
     head {
         stylesheets.site = Neos.Fusion:Template {
             templatePath = 'resource://Bare.Package/Private/Templates/Page/Default.html'
@@ -31,6 +32,7 @@ prototype(Bare.Package:DefaultPage) < prototype(Neos.Neos:Page) {
         parts {
             menu = Neos.Neos:Menu
         }
+
         javascripts {
             jquery = Neos.Fusion:Tag {
               tagName = 'script'
@@ -40,6 +42,7 @@ prototype(Bare.Package:DefaultPage) < prototype(Neos.Neos:Page) {
                 }
               }
            }
+           
             bootstrap = Neos.Fusion:Tag {
               tagName = 'script'
               attributes {
